@@ -2,21 +2,21 @@ const Pizzas = [
   {
     nombre: "Hawaiana",
     id: 1,
-    ingredientes: ["piña", "jamon", "queso"],
+    ingredientes: ["Piña", "Jamon", "Queso"],
     precio: 566,
   },
 
   {
-    nombre: "Jamon y queso",
+    nombre: "Jamon y Queso",
     id: 2,
-    ingredientes: ["jamon", "queso"],
+    ingredientes: ["Jamon", "Queso"],
     precio: 566,
   },
 
   {
     nombre: "Mexicana",
     id: 3,
-    ingredientes: ["Carne desmechada", "Nachos", "queso"],
+    ingredientes: ["Carne desmechada", "Nachos", "Queso"],
     precio: 727,
   },
 
@@ -76,9 +76,22 @@ const pizzasmenoresa600 = (precio) => {
 
 pizzasmenoresa600(600);
 
-// console.log(`C)`);
+console.log(`C)`);
 
-// const nombreypreciopizza = (Pizzas) => {
-//     return console.log(Pizzas.);
-//     })
-// }
+const nombreypreciopizza = Pizzas.filter((pizza) => {
+  return pizza.nombre && pizza.precio;
+});
+
+nombreypreciopizza.forEach((pizza) => {
+  console.log(`La pizza ${pizza.nombre} tiene un precio de $${pizza.precio}`);
+});
+
+console.log(`D)`);
+
+const pizzaconingredientes = Pizzas.filter((pizza) => {
+  return pizza.nombre && pizza.ingredientes;
+});
+
+pizzaconingredientes.forEach((pizza) => {
+  console.log(`Los ingredientes de ${pizza.nombre} son: ${pizza.ingredientes}`);
+});
